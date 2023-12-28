@@ -1,0 +1,17 @@
+
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+
+    <ion-select style="width: 350px; padding-inline-start: 10px"
+        (ionChange)="handleChange($event)"
+        label="Figura Geométrica" 
+        placeholder="Escoja una figura geométrica">
+      <ion-select-option value="circulo">Círculo</ion-select-option>
+      <ion-select-option value="triangulo">Triángulo</ion-select-option>
+    </ion-select>
+
+    <app-circulo *ngIf="mostrarCompCirculo()" />
+    <app-triangulo *ngIf="mostrarCompTriangulo()" />
+  </div>
+</ion-content>
